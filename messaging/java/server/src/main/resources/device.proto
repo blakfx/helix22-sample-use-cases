@@ -1,0 +1,25 @@
+syntax = "proto2";
+
+package device;
+
+option java_package = "com.blakfx.protocols";
+option java_outer_classname = "DeviceProtocol";
+
+message Device {
+    required string action = 1;
+    optional int32 id = 2;
+    optional string name = 3;
+    optional string status = 4;
+    optional string type = 5;
+    optional string description = 6;
+    optional string owner = 7;
+    optional ChatMsg message = 8;
+    optional string error = 9;
+}
+
+message ChatMsg {
+    required string username = 1;
+    required bytes content = 2;
+    optional string target = 3;
+    optional string fileName = 4;
+}
